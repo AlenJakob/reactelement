@@ -1,5 +1,7 @@
-# Package
+# Package react-elementus
 
-## TODO: publish package
+## pacakge will contain components
 
-Test protection push to master 2
+- modal
+
+## TODO: publish package [x] - done

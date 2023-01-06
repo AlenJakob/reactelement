@@ -1,8 +1,8 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App'
+
 import './index.css'
 import Test from './components/Test'
+import Modal from './components/modal/Modal'
 
-// Components
-export { Test }
+// Components exported
+// Main
+export { Test, Modal }
