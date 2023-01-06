@@ -1,7 +1,7 @@
-import "./Modal.scss";
+import './Modal.scss';
 
 export const Modal = () => {
-	console.log("MODAL22222");
+	console.log('MODAL22222');
 	return (
 		<div className="test">
 			bgbgbgbssaqwewasasdasdds
