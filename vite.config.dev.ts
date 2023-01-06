@@ -7,8 +7,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/main.tsx'),
-      name: 'vite-package',
-      fileName: (format) => `vite-package.${format}.js`
+      name: 'react-elementus',
+      fileName: (format) => `react-elementus.${format}.js`
     },
     rollupOptions: {
       external: ['react', 'react-dom'],

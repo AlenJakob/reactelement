@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useState } from "react";
+import { Modal } from "./components/modal/Modal";
 
 function App() {
-  const [count, setCount] = useState(0)
+	const [count, setCount] = useState(0);
 
-  return (
-    <div className="App">
-      <h2>AppComponent</h2>
-    </div>
-  )
+	return (
+		<div className="App">
+			<Modal />
+		</div>
+	);
 }
 
-export default App
+export default App;

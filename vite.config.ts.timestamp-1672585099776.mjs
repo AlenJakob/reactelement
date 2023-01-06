@@ -1,15 +1,15 @@
 // vite.config.ts
 import path from "path";
-import { defineConfig } from "file:///E:/CODE/NPM%20packages/vite-package/node_modules/vite/dist/node/index.js";
-import react from "file:///E:/CODE/NPM%20packages/vite-package/node_modules/@vitejs/plugin-react/dist/index.mjs";
-var __vite_injected_original_dirname = "E:\\CODE\\NPM packages\\vite-package";
+import { defineConfig } from "file:///E:/CODE/NPM%20packages/react-elementus/node_modules/vite/dist/node/index.js";
+import react from "file:///E:/CODE/NPM%20packages/react-elementus/node_modules/@vitejs/plugin-react/dist/index.mjs";
+var __vite_injected_original_dirname = "E:\\CODE\\NPM packages\\react-elementus";
 var vite_config_default = defineConfig({
   root: "./",
   build: {
     lib: {
       entry: path.resolve(__vite_injected_original_dirname, "src/main.tsx"),
-      name: "vite-package",
-      fileName: (format) => `vite-package.${format}.js`
+      name: "react-elementus",
+      fileName: (format) => `react-elementus.${format}.js`
     },
     rollupOptions: {
       external: ["react", "react-dom"],
