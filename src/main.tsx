@@ -1,11 +1,12 @@
 import Modal from './components/modal/Modal';
-import ReactDOM, { createRoot } from 'react-dom/client';
+import { NtButton } from './components/Button/NtButton';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import React from 'react';
 
 // Components exported
 // Main
-export { Modal };
+export { Modal, NtButton };
 
 // Local tests:
 

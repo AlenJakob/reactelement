@@ -1,13 +1,35 @@
+import classNames from 'classnames';
+import { ReactNode } from 'react';
 import './Modal.scss';
 
-export const Modal = () => {
+type PropsModal = {
+	content?: ReactNode;
+	buttonClose?: boolean;
+	isVisible: boolean;
+	style: string;
+};
+
+export const Modal = ({ content, buttonClose, isVisible = false, style }: PropsModal) => {
 	console.log('MODAL22222');
+
 	return (
-		<div className="test">
-			bgbgbgbssaqwewasasdasdds
-			<h1>test</h1>
-		</div>
+		<>
+			{isVisible && (
+				<div className={classNames('nt-modal', `nt-modal__style--${style}`, {})}>
+					<div className="nt-modal__header"></div>
+					<h1>test</h1>
+					{content}
+				</div>
+			)}
+		</>
 	);
+};
+
+Modal.defaultProps = {
+	content: false,
+	buttonClose: false,
+	isVisible: false,
+	style: 'light',
 };
 
 export default Modal;

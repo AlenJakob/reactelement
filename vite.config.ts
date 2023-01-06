@@ -1,7 +1,6 @@
 import path from 'path';
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { viteExcludeStylePlugin } from 'vite-exclude-style-plugin';
 
 export default defineConfig({
 	root: './',
@@ -21,8 +20,5 @@ export default defineConfig({
 			},
 		},
 	},
-	// esbuild: {
-	//   jsxInject: `import React from 'react'`,
-	// },
-	plugins: [react(), viteExcludeStylePlugin()],
+	plugins: [react()],
 });

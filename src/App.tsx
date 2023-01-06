@@ -1,12 +1,22 @@
 import { useState } from 'react';
+import './index.scss';
 import { Modal } from './components/modal/Modal';
+import { NtButton } from './components/Button/NtButton';
 
 function App() {
-	const [count, setCount] = useState(0);
+	const [modal, setModal] = useState(false);
+
+	const toggleModalTest = () => {
+		setModal(!modal);
+	};
 
 	return (
 		<div className="App">
-			<Modal />
+			{/* <button onClick={toggleModalTest}>Toggle Modal</button> */}
+			<div>
+				<NtButton handleClick={toggleModalTest} text="Toggle Modal" />
+			</div>
+			<Modal isVisible={modal} />
 		</div>
 	);
 }
