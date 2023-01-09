@@ -1,11 +1,12 @@
 @import '../../styles/variables.scss';
 
 .nt-modal {
-	width: 500px;
-	height: 500px;
+	width: 400px;
+	height: 400px;
 	position: absolute;
 	left: 50%;
 	top: 50%;
+	border-radius: 3px;
 	transform: translate(-50%, -50%);
 	&__style {
 		&--dark {

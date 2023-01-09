@@ -17,7 +17,6 @@ export const Modal = ({ content, buttonClose, isVisible = false, style }: PropsM
 			{isVisible && (
 				<div className={classNames('nt-modal', `nt-modal__style--${style}`, {})}>
 					<div className="nt-modal__header"></div>
-					<h1>test</h1>
 					{content}
 				</div>
 			)}
