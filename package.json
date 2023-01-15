@@ -18,7 +18,8 @@
 		"sourceType": "module"
 	},
 	"scripts": {
-		"dev": "vite --base=http://localhost:3000/ --force",
+		"dev": "vite",
+		"devforce": "vite --base=http://localhost:3000/ --force",
 		"build": "vite build",
 		"watch": "yarn vite build --watch --config vite.config.dev.js",
 		"preview": "vite preview"
@@ -26,6 +27,7 @@
 	"dependencies": {
 		"@types/webrtc": "0.0.33",
 		"classnames": "2.3.2",
+		"framer-motion": "8.4.3",
 		"prop-types": "^15.8.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
