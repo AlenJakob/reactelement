@@ -1,4 +1,4 @@
-export const sizeConverter = (size: number) => {
+export const sizeIconConverter = (size: number) => {
 	const BASE_CLASS = 'nt-icon__size';
 
 	if (size === 1) {
