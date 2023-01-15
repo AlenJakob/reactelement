@@ -41,7 +41,6 @@ type PropsModal = {
 	modalConfig: {
 		title: string;
 		content: string;
-		buttons: PropsNtButton[];
 	};
 };
 export type { PropsNtButton, IconConfigProp, NtIconProps, PropsModal };
