@@ -1,14 +1,18 @@
-@import '@styles/variables.scss';
+@import '../../styles/variables.scss';
 
 .nt-icon {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	&__color {
-		&--basic {
-			fill: #2d0;
-		}
+	&__color--primary {
+		fill: $cadet-blue;
+	}
+	&__color--secondary {
+		fill: $dark-charcoal;
+	}
+	&__color--green {
+		fill: greenyellow;
 	}
 
 	&__size {
@@ -23,6 +27,15 @@
 		&--big svg {
 			height: 32px;
 			width: 32px;
+		}
+	}
+
+	&__mode {
+		&--dark svg {
+			fill: $dark-charcoal;
+		}
+		&--light svg {
+			fill: $cadet-blue;
 		}
 	}
 }
