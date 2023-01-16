@@ -1,32 +1,35 @@
-import { useState } from 'react';
 import './index.scss';
-import { Modal } from './components/modal/Modal';
-import { NtButton } from './components/Button/NtButton';
-// TODO: TESTING HERE THE PACAKGE :)
+import { useState } from 'react';
+import NtModal from './components/modal/NtModal';
+import { modalConfigMock } from './helpers/consts';
+import { NtButton } from './main';
 
-const iconConfig = {
-	iconName: 'Plus',
-	onlyIcon: false,
-	additionalClassIcon: 'nt-icon__color--basic',
-};
+// Example of icon config
+// const iconConfig = {
+// 	iconName: 'Plus',
+// 	onlyIcon: true,
+// 	additionalClassIcon: 'nt-icon__color--primary',
+// 	mode: 'dark | light',
+// };
 
-function App() {
-	const [modal, setModal] = useState(false);
+const App = () => {
+	const [isModalVisible, setModaVisible] = useState(false);
 
-	const toggleModalTest = () => {
-		setModal(!modal);
-	};
+	const openModal = () => setModaVisible(true);
+	const closeModal = () => setModaVisible(false);
 
 	return (
 		<div className="App">
-			{/* <button onClick={toggleModalTest}>Toggle Modal</button> */}
-			<div>
-				{/* <NtButton handleClick={toggleModalTest} text="Toggle Modal" /> */}
-				<NtButton handleClick={toggleModalTest} iconConfig={iconConfig} text="Toggle modal" />
-			</div>
-			<Modal isVisible={modal} content={<div>lorel ipsum 12</div>} />
+			<NtButton handleClick={openModal} text="click" />
+			<NtModal
+				closeModal={closeModal}
+				handleCancel={closeModal}
+				handleConfirm={closeModal}
+				isModalVisible={isModalVisible}
+				modalConfig={modalConfigMock}
+			/>
 		</div>
 	);
-}
+};
 
 export default App;
