@@ -1,47 +1,57 @@
 import './NtButton.scss';
 import classnames from 'classnames';
-import { MouseEventHandler } from 'react';
-import { NtIcon } from '../icon/NtIcon';
+import NtIcon from '../icon/NtIcon';
+import { PropsNtButton } from '../../types/types';
+import { motion } from 'framer-motion';
 
-type IconConfigProp = {
-	iconName: string;
-	onlyIcon?: boolean;
-	additionalClassIcon: string;
-};
+/**
+ *
+ * @param {string} buttonStyle change style of button
+ * dark' | 'light'
+ */
 
-type PropsNtButton = {
-	border?: boolean | undefined;
-	round?: boolean | undefined;
-	loader?: boolean | undefined;
-	fullWidth?: boolean | undefined;
-	text?: string;
-	onlyIcon?: boolean;
-	iconName: string | undefined;
-	additionalClassIcon: string | undefined;
-	handleClick: MouseEventHandler<HTMLButtonElement> | undefined;
-	iconConfig: IconConfigProp;
-};
+export const NtButton = ({
+	border,
+	round,
+	fullWidth,
+	text,
+	handleClick,
+	iconConfig,
+	additionalClassButton,
+	marginLeft,
+	animationConfig,
+	buttonMode = 'dark',
+}: PropsNtButton) => {
+	const { onlyIcon, iconMode = 'dark' } = iconConfig;
 
-export const NtButton = ({ border, round, fullWidth, text, onlyIcon, handleClick, iconConfig }: PropsNtButton) => {
-	
+	const buttonIconOnly = Boolean(onlyIcon && !text);
+	const buttonTextOnly = Boolean(!onlyIcon && text);
+	const buttonIconAndText = Boolean(onlyIcon && text);
+
+	const reverseIconMode = buttonMode !== iconMode ? iconMode : buttonMode;
+
 	return (
-		<button
+		<motion.button
+			whileHover={animationConfig ? animationConfig.whileHover : ''}
 			onClick={handleClick}
-			className={classnames('nt-button', {
+			className={classnames('nt-button', additionalClassButton, `nt-button__style--${buttonMode}`, {
 				'nt-button__border': border,
 				'nt-button__round': round,
 				'nt-button__fullWidth': fullWidth,
 				'nt-button__icon-only': onlyIcon,
+				'nt-button__text-with-icon': buttonIconAndText,
+				'nt-button__place--margin-left': marginLeft,
 			})}
 		>
-			{onlyIcon && <NtIcon iconConfig={iconConfig} />}
-			{!onlyIcon && text && (
+			{buttonIconOnly && <NtIcon iconConfig={iconConfig} iconMode={reverseIconMode} />}
+			{buttonTextOnly && <div className="nt-button__content">{text}</div>}
+			{buttonIconAndText && (
 				<div className="nt-button__content">
-					{<NtIcon iconConfig={iconConfig} />}
+					{<NtIcon iconConfig={iconConfig} iconMode={reverseIconMode} />}
 					{text}
 				</div>
 			)}
-		</button>
+		</motion.button>
 	);
 };
 
@@ -50,9 +60,8 @@ NtButton.defaultProps = {
 	round: false,
 	loader: false,
 	fullWidth: false,
-	text: false,
+	text: '',
 	iconName: '',
-	onlyIcon: true,
 	additionalClassIcon: '',
 	handleClick: () => {},
 	iconConfig: {

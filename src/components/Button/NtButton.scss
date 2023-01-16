@@ -12,10 +12,10 @@
 	font-size: 1em;
 	font-weight: 500;
 	&:hover {
-		background-color: darken($dark-charcoal, 5%);
+		background-color: lighten($dark-charcoal, 7%);
 	}
 	&:active {
-		background-color: lighten($dark-charcoal, 2%);
+		background-color: darken($dark-charcoal, 10%);
 	}
 	&__round {
 		border-radius: 10px;
@@ -40,6 +40,31 @@
 		&--big {
 			min-width: 30px;
 			min-height: 30px;
+		}
+	}
+	&__text-with-icon {
+		.nt-button__content {
+			display: flex;
+			align-items: center;
+			& svg {
+				margin-right: 5px;
+				fill: grey;
+			}
+		}
+	}
+	&__place {
+		&--margin-left {
+			margin-left: $left-spacer-m;
+		}
+	}
+	&__style {
+		&--dark {
+			background: $dark-charcoal;
+			color: $cadet-blue;
+		}
+		&--light {
+			background: $cadet-blue;
+			color: $dark-charcoal;
 		}
 	}
 }
