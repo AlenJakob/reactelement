@@ -3,7 +3,7 @@ import { NtButton } from '../Button/NtButton';
 import './Modal.scss';
 import { motion } from 'framer-motion';
 import { PropsModal } from '../../types/types';
-import { modalAnimationVariants } from '../../helpers/animationConfig';
+import { modalAnimationVariants } from '../../const/animationConfig';
 
 // TODO: Outside click - FEATURE
 
