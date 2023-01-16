@@ -2,7 +2,7 @@ import './NtIcon.scss';
 import React, { Suspense } from 'react';
 import classNames from 'classnames';
 import { sizeIconConverter } from '../../helpers/common';
-import { SIZE_CONVERTED } from '../../helpers/consts';
+import { SIZE_CONVERTED } from '../../const/consts';
 import { NtIconProps } from '../../types/types';
 
 const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'none' }: NtIconProps) => {

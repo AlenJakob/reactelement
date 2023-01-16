@@ -1,7 +1,7 @@
 import './index.scss';
 import { useState } from 'react';
 import NtModal from './components/modal/NtModal';
-import { modalConfigMock } from './helpers/consts';
+import { modalConfigMock } from './const/consts';
 import { NtButton } from './main';
 
 // Example of icon config
