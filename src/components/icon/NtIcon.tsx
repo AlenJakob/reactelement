@@ -5,8 +5,7 @@ import { sizeIconConverter } from '../../helpers/common';
 import { SIZE_CONVERTED } from '../../helpers/consts';
 import { NtIconProps } from '../../types/types';
 
-
-export const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'nonew' }: NtIconProps) => {
+const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'none' }: NtIconProps) => {
 	const { iconName, additionalClassIcon = '' } = iconConfig;
 
 	const iconPath = 'Icon';
@@ -16,7 +15,7 @@ export const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'nonew' }: 
 
 	const DynamicNtIcon = React.lazy(() => import(`../../components/icons/${iconPath}${iconNameDefault}.tsx`));
 	return (
-		<div className={classNames('nt-icon', additionalClassIcon, iconSizeCss,`nt-icon__mode--${iconMode}`)}>
+		<div className={classNames('nt-icon', additionalClassIcon, iconSizeCss, `nt-icon__mode--${iconMode}`)}>
 			{iconNameDefault && (
 				<Suspense>
 					<DynamicNtIcon />
@@ -25,3 +24,5 @@ export const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'nonew' }: 
 		</div>
 	);
 };
+
+export default NtIcon;
