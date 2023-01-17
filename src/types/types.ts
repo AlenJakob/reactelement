@@ -31,7 +31,7 @@ type NtIconProps = {
 	iconMode?: string | undefined;
 };
 
-type PropsModal = {
+type PropsNtModal = {
 	buttonClose?: boolean | undefined;
 	isModalVisible: boolean | number;
 	style?: string | undefined;
@@ -43,4 +43,4 @@ type PropsModal = {
 		content: string;
 	};
 };
-export type { PropsNtButton, IconConfigProp, NtIconProps, PropsModal };
+export type { PropsNtButton, IconConfigProp, NtIconProps, PropsNtModal };
