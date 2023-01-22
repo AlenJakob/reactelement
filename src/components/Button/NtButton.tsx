@@ -70,5 +70,3 @@ NtButton.defaultProps = {
 	},
 	buttonMode: 'dark',
 };
-
-export default NtButton;

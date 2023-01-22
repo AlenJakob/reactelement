@@ -1,9 +1,9 @@
-import classNames from 'classnames';
 import './NtModal.scss';
+import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { PropsNtModal } from '../../types/types';
 import { modalAnimationVariants } from '../../const/animationConfig';
-import  NtButton  from '../Button/NtButton';
+import { NtButton } from '../Button/NtButton';
 
 export const NtModal = ({
 	buttonClose,
@@ -57,6 +57,8 @@ NtModal.defaultProps = {
 	buttonClose: true,
 	isVisible: false,
 	style: 'light',
+	modalConfig: {
+		title: '',
+		content: '',
+	},
 };
-
-export default NtModal;

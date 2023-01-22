@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import React from 'react';
+import './index.scss'
+
 // import NtIcon from './components/icon/NtIcon';
 // import NtButton from './components/Button/NtButton';
 // import NtMainModal from './components/modal/NtMainModal';

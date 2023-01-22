@@ -31,7 +31,7 @@ export default defineConfig({
 	plugins: [
 		react(),
 		dts({
-			include: ['src/component/'],
+			include: ['src/components/'],
 		}),
 	],
 });

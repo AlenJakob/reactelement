@@ -1,7 +1,7 @@
-// @flow
 import { AnimatePresence } from 'framer-motion';
 import { PropsNtModal } from '../../types/types';
-import NtModal from './NtModal';
+import { NtModal } from './NtModal';
+import './NtModal.scss';
 
 export const NtMainModal = ({ isModalVisible, closeModal, handleCancel, handleConfirm, modalConfig }: PropsNtModal) => {
 	return (
@@ -18,5 +18,3 @@ export const NtMainModal = ({ isModalVisible, closeModal, handleCancel, handleCo
 		</AnimatePresence>
 	);
 };
-
-// export default NtMainModal;
