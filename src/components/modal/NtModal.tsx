@@ -5,8 +5,6 @@ import { motion } from 'framer-motion';
 import { PropsNtModal } from '../../types/types';
 import { modalAnimationVariants } from '../../const/animationConfig';
 
-// TODO: Outside click - FEATURE
-
 export const NtModal = ({
 	buttonClose,
 	style,

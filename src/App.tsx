@@ -4,6 +4,8 @@ import NtMainModal from './components/modal/NtMainModal';
 import { modalConfigMock } from './const/consts';
 import { NtButton } from './main';
 
+// TODO: Outside click - FEATURE
+
 // Example of icon config
 // const iconConfig = {
 // 	iconName: 'Plus',

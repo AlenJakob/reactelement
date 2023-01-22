@@ -5,7 +5,6 @@ import { PropsNtButton } from '../../types/types';
 import { motion } from 'framer-motion';
 
 /**
- *
  * @param {string} buttonStyle change style of button
  * dark' | 'light'
  */
@@ -20,7 +19,7 @@ export const NtButton = ({
 	additionalClassButton,
 	marginLeft,
 	animationConfig,
-	buttonMode = 'dark',
+	buttonMode,
 }: PropsNtButton) => {
 	const { onlyIcon, iconMode = 'dark' } = iconConfig;
 
@@ -69,4 +68,5 @@ NtButton.defaultProps = {
 		onlyIcon: false,
 		additionalClassIcon: '',
 	},
+	buttonMode: 'dark',
 };
