@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import { NtButton } from '../Button/NtButton';
 import './NtModal.scss';
 import { motion } from 'framer-motion';
 import { PropsNtModal } from '../../types/types';
 import { modalAnimationVariants } from '../../const/animationConfig';
+import  NtButton  from '../Button/NtButton';
 
 export const NtModal = ({
 	buttonClose,

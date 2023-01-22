@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
  * dark' | 'light'
  */
 
-export const NtButton = ({
+const NtButton = ({
 	border,
 	round,
 	fullWidth,
@@ -70,3 +70,5 @@ NtButton.defaultProps = {
 	},
 	buttonMode: 'dark',
 };
+
+export default NtButton;

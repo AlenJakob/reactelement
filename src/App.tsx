@@ -2,7 +2,7 @@ import './index.scss';
 import { useState } from 'react';
 import NtMainModal from './components/modal/NtMainModal';
 import { modalConfigMock } from './const/consts';
-import { NtButton } from './main';
+import NtButton from './components/Button/NtButton';
 
 // TODO: Outside click - FEATURE
 
