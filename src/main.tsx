@@ -1,4 +1,4 @@
-import NtModal from './components/modal/NtModal';
+import NtMainModal from './components/modal/NtMainModal';
 import { NtButton } from './components/Button/NtButton';
 import { createRoot } from 'react-dom/client';
 import App from './App';
@@ -7,7 +7,7 @@ import NtIcon from './components/icon/NtIcon';
 
 // Components exported
 // Main
-export { NtModal, NtButton, NtIcon };
+export { NtMainModal, NtButton, NtIcon };
 
 // Local tests file:
 

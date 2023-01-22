@@ -1,6 +1,6 @@
 import './index.scss';
 import { useState } from 'react';
-import NtModal from './components/modal/NtModal';
+import NtMainModal from './components/modal/NtMainModal';
 import { modalConfigMock } from './const/consts';
 import { NtButton } from './main';
 
@@ -21,7 +21,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<NtButton handleClick={openModal} text="click" />
-			<NtModal
+			<NtMainModal
 				closeModal={closeModal}
 				handleCancel={closeModal}
 				handleConfirm={closeModal}

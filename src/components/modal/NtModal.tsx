@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { NtButton } from '../Button/NtButton';
-import './Modal.scss';
+import './NtModal.scss';
 import { motion } from 'framer-motion';
 import { PropsNtModal } from '../../types/types';
 import { modalAnimationVariants } from '../../const/animationConfig';

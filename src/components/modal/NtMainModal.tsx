@@ -1,13 +1,13 @@
 // @flow
 import { AnimatePresence } from 'framer-motion';
 import { PropsNtModal } from '../../types/types';
-import Modal from './NtModal';
+import NtModal from './NtModal';
 
-const NtModalWrapper = ({ isModalVisible, closeModal, handleCancel, handleConfirm, modalConfig }: PropsNtModal) => {
+const NtMainModal = ({ isModalVisible, closeModal, handleCancel, handleConfirm, modalConfig }: PropsNtModal) => {
 	return (
 		<AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
 			{isModalVisible && (
-				<Modal
+				<NtModal
 					closeModal={closeModal}
 					handleCancel={handleCancel}
 					handleConfirm={handleConfirm}
@@ -19,4 +19,4 @@ const NtModalWrapper = ({ isModalVisible, closeModal, handleCancel, handleConfir
 	);
 };
 
-export default NtModalWrapper;
+export default NtMainModal;
