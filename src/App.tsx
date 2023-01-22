@@ -1,6 +1,6 @@
 import './index.scss';
 import { useState } from 'react';
-import NtMainModal from './components/modal/NtMainModal';
+import { NtMainModal } from './components/modal/NtMainModal';
 import { modalConfigMock } from './const/consts';
 import NtButton from './components/Button/NtButton';
 

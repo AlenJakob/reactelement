@@ -1,6 +1,6 @@
 import './NtButton.scss';
 import classnames from 'classnames';
-import NtIcon from '../icon/NtIcon';
+import { NtIcon } from '../icon/NtIcon';
 import { PropsNtButton } from '../../types/types';
 import { motion } from 'framer-motion';
 
@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
  * dark' | 'light'
  */
 
-const NtButton = ({
+export const NtButton = ({
 	border,
 	round,
 	fullWidth,

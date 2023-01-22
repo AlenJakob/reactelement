@@ -5,7 +5,7 @@ import { sizeIconConverter } from '../../helpers/common';
 import { SIZE_CONVERTED } from '../../const/consts';
 import { NtIconProps } from '../../types/types';
 
-const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'none' }: NtIconProps) => {
+export const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'none' }: NtIconProps) => {
 	const { iconName, additionalClassIcon = '' } = iconConfig;
 
 	const iconPath = 'Icon';
@@ -24,5 +24,3 @@ const NtIcon = ({ iconSize = 'medium', iconConfig, iconMode = 'none' }: NtIconPr
 		</div>
 	);
 };
-
-export default NtIcon;

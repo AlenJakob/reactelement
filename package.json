@@ -1,19 +1,24 @@
 {
 	"name": "react-elementus",
 	"private": false,
-	"version": "0.0.4",
+	"version": "0.0.8",
 	"type": "module",
-	"main": "./dist/react-elementus.umd.js",
-	"module": "./dist/react-elementus.es.js",
 	"bic": [
 		"src"
+	],
+	"files": [
+		"dist"
 	],
 	"exports": {
 		".": {
 			"import": "./dist/react-elementus.es.js",
 			"require": "./dist/react-elementus.umd.js"
-		}
+		},
+		"./dist/style.css": "./dist/style.css"
 	},
+	"main": "./dist/react-elementus.umd.js",
+	"module": "./dist/react-elementus.es.js",
+	"types": "./dist/index.d.ts",
 	"parserOptions": {
 		"sourceType": "module"
 	},
@@ -31,6 +36,7 @@
 		"prop-types": "^15.8.1",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"vite-plugin-dts": "^1.7.1",
 		"watch": "1.0.2"
 	},
 	"resolutions": {
