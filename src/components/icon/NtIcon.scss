@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.nt-icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__color--primary {
+		fill: $cadet-blue;
+	}
+	&__color--secondary {
+		fill: $dark-charcoal;
+	}
+	&__color--green {
+		fill: greenyellow;
+	}
+
+	&__size {
+		&--small svg {
+			height: 16px;
+			width: 16px;
+		}
+		&--medium svg {
+			height: 24px;
+			width: 24px;
+		}
+		&--big svg {
+			height: 32px;
+			width: 32px;
+		}
+	}
+
+	&__mode {
+		&--dark svg {
+			fill: $dark-charcoal;
+		}
+		&--light svg {
+			fill: $cadet-blue;
+		}
+	}
+}

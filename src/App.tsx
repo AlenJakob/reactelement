@@ -1,15 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import './index.scss';
+import { useState } from 'react';
+import { NtMainModal } from './components/modal/NtMainModal';
+import { modalConfigMock } from './const/consts';
+import { NtButton } from './components/Button/NtButton';
 
-function App() {
-  const [count, setCount] = useState(0)
+// TODO: Outside click - FEATURE
 
-  return (
-    <div className="App">
-      <h2>AppComponent</h2>
-    </div>
-  )
-}
+// Example of icon config
+// const iconConfig = {
+// 	iconName: 'Plus',
+// 	onlyIcon: true,
+// 	additionalClassIcon: 'nt-icon__color--primary',
+// 	mode: 'dark | light',
+// };
 
-export default App
+const App = () => {
+	const [isModalVisible, setModaVisible] = useState(false);
+
+	const openModal = () => setModaVisible(true);
+	const closeModal = () => setModaVisible(false);
+
+	return (
+		<div className="App">
+			<NtButton handleClick={openModal} text="click" />
+			<NtMainModal
+				closeModal={closeModal}
+				handleCancel={closeModal}
+				handleConfirm={closeModal}
+				isModalVisible={isModalVisible}
+				modalConfig={modalConfigMock}
+			/>
+		</div>
+	);
+};
+
+export default App;

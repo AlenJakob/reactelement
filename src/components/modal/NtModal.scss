@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+
+.nt-modal {
+	min-width: 360px;
+	min-height: 200px;
+	position: absolute;
+	border-radius: 3px;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+	&__content-header {
+		justify-content: flex-end;
+		display: flex;
+	}
+	&__content-buttons {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__content {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		overflow: hidden;
+		& p {
+			text-align: center;
+			word-wrap: break-word;
+			white-space: pre-wrap;
+			word-break: break-word;
+		}
+	}
+	&__content-title {
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	&__content-text {
+		margin: 30px 0;
+		font-size: 16px;
+		line-height: 20px;
+		align-items: center;
+	}
+	&__style {
+		&--dark {
+			background-color: $dark-charcoal;
+			color: $cadet-blue;
+		}
+		&--light {
+			background-color: $cadet-blue;
+			color: $dark-charcoal;
+		}
+	}
+}

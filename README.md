@@ -1,5 +1,19 @@
-# Package
+# Package react-elementus
 
-## TODO: publish package
+## pacakge will contain components
 
-Test protection push to master 2
+- modal
+- button
+- icon
+
+## NOTE
+
+- Sass is needed use command to install
+
+`npm install sass`
+
+or
+
+`yarn add -D sass`
+
+## TODO: publish package [x] - done
